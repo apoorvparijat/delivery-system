@@ -83,4 +83,17 @@ public class FetchData {
         s = pool.getResult(query);
         return s;
     }
+       public static ResultSet getRow(String tableName, String condition){
+        ResultSet s = null;
+        String toFetchColumn = "*";
+        String query = "";
+        if(!condition.equals(""))
+           query = "SELECT " + toFetchColumn + " FROM " + tableName + " WHERE " + condition;
+        else
+            query = "SELECT " + toFetchColumn + " FROM " + tableName;
+        Debugger.display(query,20);
+        s = pool.getResult(query);
+        return s;
+    }
+
 }

@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -22,7 +25,7 @@
 			</div> <!--Header left closed-->
 			
 			<div class="header-right">
-				<a href="http://localhost:8080/deliver-system/download/<s:property value="pdt.tx" />">
+				<a href="download/<s:property value="pdt.tx" />">
 				<center><img src="imgs/zip-icon.png" width="128" height="128" /></center>
 				<center><h3>Download</h3></center>
 				</a>

@@ -34,6 +34,14 @@
 		<action name="*img/*">
 			<result>img/{2}</result>
 		</action>
+
+	</package>
+	<package name="download" extends="struts-default" namespace="/delivery-system/download">
+		<action name="*" class="delivery.action.DeliverAction" method="verifyDownload">
+			<param name="verify-tx">{1}</param>
+			<result name="success">wp-demon.zip</result>
+			<result name="error"></result>
+		</action>
 	</package>
 
 </struts>

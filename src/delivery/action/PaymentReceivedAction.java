@@ -26,12 +26,10 @@ public class PaymentReceivedAction extends ActionSupport implements Preparable
 			ServletActionContext.getServletContext().setAttribute("dbPool",db);
 			Objects.setPool(db);
 		}
-		ServletActionContext.getServletContext().setAttribute("Application","Aceteq Delivery");
 	}
 
 	public String execute() throws Exception
 	{
-		ServletActionContext.getServletContext().setAttribute("Application","Aceteq Delivery");
 		pdt = new PaypalPDT();
 		pdt.setTx(tx);
 		pdt.setAmt(amt);
@@ -39,14 +37,9 @@ public class PaymentReceivedAction extends ActionSupport implements Preparable
 		pdt.setCc(cc);
 		pdt.setItem_name(item_name);
 		boolean verify = pdt.verifyTransaction();
-		if(verify){
-			pdt.save();
-			return "success";
-		}
-		else{
-			pdt.save();
-			return "retry";
-		}
+		pdt.save();
+		String returnString = verify ? "success" : "retry";
+		return returnString;
 	}
 
 	public void setPdt(PaypalPDT p)
