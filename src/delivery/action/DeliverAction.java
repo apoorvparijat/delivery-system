@@ -35,14 +35,20 @@ public class DeliverAction extends ActionSupport implements Preparable{
 	}
 
 	public String verifyDownload(){
-		Map<String,String> strData = new HashMap<String,String>();
-		strData.put("tx",verifyToken);
-		strData.put("verified","true");
-		ResultSet rs = FetchData.getRow("transactions",null,strData,null);
-		if(rs != null)
-			return "success";
-		else
-			return "error";
+		try{
+			Map<String,String> strData = new HashMap<String,String>();
+			strData.put("tx",verifyToken);
+			strData.put("verified","true");
+			ResultSet rs = FetchData.getRow("transactions",null,strData,null);
+			if(rs != null && rs.next())
+				return "success";
+			else
+				return "error";
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return "error";
 	}
 	
 	public void setProduct(Product p)

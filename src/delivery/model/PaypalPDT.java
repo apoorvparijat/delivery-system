@@ -16,6 +16,7 @@ public class PaypalPDT
 	private String cc;
 	private String item_name;
 	private boolean verified;
+	private String paypalResp;
 	private final static String at = "zW23TEL-sHErudZAvhyX5fythMDM8zmA_nNcbmgucFrE6QfSOjVpY4AOxh4";
 	public PaypalPDT()
 	{
@@ -62,6 +63,11 @@ public class PaypalPDT
 		
 			BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
 			String res = in.readLine();
+			str = "";
+			while((str = in.readLine()) != null){
+				res += str;
+			}
+			this.paypalResp = res;
 			System.out.println(res);
 			if (res.substring(0,4).equals("SUCC"))
 			{ 
@@ -83,6 +89,7 @@ public class PaypalPDT
 		strData.put("st",this.st);
 		strData.put("amt",this.amt);
 		strData.put("verified",new Boolean(this.verified).toString());
+		strData.put("paypalResponse",this.paypalResp);
 		UpdateDB.insert("transactions",strData,null);	
 	}
 	public void setTx(String x)
