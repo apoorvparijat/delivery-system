@@ -2,16 +2,16 @@
 
 
 <!-- ====================================================================== 
-     Date:     January 2010
+     Date:     January 2012
      
-     Project:  Struts 2 Basic Application
-     
-     Author:   Bruce Phillips
+     Project:  Aceteq Delivery System
+
+     Author:   Apoorv Parijat 
      ====================================================================== -->
 
 
 	
-<project name="Sample Struts 2 Application" default="archive" basedir=".">
+<project name="Aceteq Product Delivery System" default="deploy" basedir=".">
 	
     <description>
     	This is the sample struts applicaiton to be used to start different products.
