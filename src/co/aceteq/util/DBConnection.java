@@ -44,8 +44,6 @@ public class DBConnection  {
 
                     // setup the connection pool BoneCPConfig config = new com.jolbox.bonecp.BoneCPConfig();
                     BoneCPConfig config = new BoneCPConfig();
-                    if(db == "")
-                        db = "wp-demon";
                     config.setJdbcUrl("jdbc:mysql://localhost/"+ db); // jdbc url specific to your database, eg jdbc:mysql://127.0.0.1/yourdb
                     config.setUsername(user); 
                     config.setPassword(pass);
@@ -69,7 +67,7 @@ public class DBConnection  {
 
     public DBConnection() {
         this.user = "root";
-            this.pass = "";
+            this.pass = "shonen";
             this.db = "wp-demon";
             connectionPool = null;
             Connection connection = null;

@@ -17,7 +17,8 @@ public class PaypalPDT
 	private String item_name;
 	private boolean verified;
 	private String paypalResp;
-	private final static String at = "zW23TEL-sHErudZAvhyX5fythMDM8zmA_nNcbmgucFrE6QfSOjVpY4AOxh4";
+	//private final static String at = "zW23TEL-sHErudZAvhyX5fythMDM8zmA_nNcbmgucFrE6QfSOjVpY4AOxh4";
+	private final static String at = "G6Ic2SOeWBS-7EBGEZiEi-D7molmbwf1BDpjLAsnbFM74G7aTZVwuHxBJsS";
 	public PaypalPDT()
 	{
 		verified = false;
@@ -54,7 +55,7 @@ public class PaypalPDT
 		boolean verified = false;
 		try{
 			String str = "cmd=_notify-synch&tx="+tx+"&at="+at;
-			HttpsURLConnection uc = getSSLByPassedConnection("https://www.sandbox.paypal.com/cgi-bin/webscr"); 
+			HttpsURLConnection uc = getSSLByPassedConnection("https://www.paypal.com/cgi-bin/webscr"); 
 			uc.setDoOutput(true);
 			uc.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 			PrintWriter pw = new PrintWriter(uc.getOutputStream());
