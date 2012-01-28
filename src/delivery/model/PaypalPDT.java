@@ -65,7 +65,7 @@ public class PaypalPDT
 			String res = in.readLine();
 			str = "";
 			while((str = in.readLine()) != null){
-				res += str;
+				res += "\n" +  str;
 			}
 			this.paypalResp = res;
 			System.out.println(res);
