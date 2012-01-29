@@ -69,7 +69,7 @@ public class DBConnection  {
 
     public DBConnection() {
         this.user = "root";
-            this.pass = "";
+            this.pass = "shonen";
             this.db = "wp-demon";
             connectionPool = null;
             Connection connection = null;
