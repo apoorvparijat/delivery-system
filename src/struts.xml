@@ -23,9 +23,14 @@
 			<result name="success">test12.jsp</result>
 		</action>
 	-->
-		<action name="downloadmeowmov" class="delivery.action.TestAction" method="downloadMeow">
+		<action name="download.exe" class="delivery.action.TestAction" method="downloadMeow">
 			<result name="success">meow.mov</result>
 		</action>
+
+		<action name="downloadexe" class="delivery.action.TestAction" method="downloadMeow">
+			<result name="success">meow.mov</result>
+		</action>
+
 
 		<action name="*css/*">
 			<result>/css/{2}</result>
@@ -35,15 +40,17 @@
 			<result>img/{2}</result>
 		</action>
 
-		<action name="download" class="delivery.action.DeliverAction" method="verifyDownload">
+		<!--<action name="download" class="delivery.action.DeliverAction" method="verifyDownload">
 			<result name="success">wp-demon.zip</result>
 			<result name="error"></result>
 		</action>
+		-->
 	</package>
 	<package name="download" extends="struts-default" namespace="/download">
 		<action name="*" class="delivery.action.DeliverAction" method="verifyDownload">
-			<result name="success">../wp-demon.zip</result>
-			<result name="error"></result>
+			<param name="verifyToken">{1}</param>
+			<result name="redirect" type="redirect">../dump/{1}/wp-demon.zip</result>
+			<result name="error">../error.html</result>
 		</action>
 	</package>
 

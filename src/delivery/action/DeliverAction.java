@@ -10,6 +10,9 @@ import co.aceteq.objects.Objects;
 import co.aceteq.util.FetchData;
 import java.sql.*;
 import java.util.*;
+import co.aceteq.util.FileMover;
+import java.io.*;
+
 
 public class DeliverAction extends ActionSupport implements Preparable{
 
@@ -41,9 +44,16 @@ public class DeliverAction extends ActionSupport implements Preparable{
 			strData.put("verified","true");
 			ResultSet rs = FetchData.getRow("transactions",null,strData,null);
 			if(rs != null && rs.next())
-				return "success";
-			else
+			{
+				System.out.println("\n\\n\n\n\n\n Creating directory ... \n\n\n\n\n");
+				String dest = "../webapps/delivery-system/dump/"+verifyToken;
+				boolean dir = (new File(dest).mkdir());
+				FileMover.copyFile("../webapps/delivery-system/WEB-INF/content/wp-demon.zip",dest+"/wp-demon.zip");
+				return "redirect";
+			}
+			else{
 				return "error";
+			}
 		}catch(Exception e)
 		{
 			e.printStackTrace();

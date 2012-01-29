@@ -25,7 +25,7 @@
 			</div> <!--Header left closed-->
 			
 			<div class="header-right">
-				<a href="download?verifyToken=<s:property value="pdt.tx" />">
+				<a href="download/<s:property value="pdt.tx" />">
 				<center><img src="imgs/zip-icon.png" width="128" height="128" /></center>
 				<center><h3>Download</h3></center>
 				</a>
