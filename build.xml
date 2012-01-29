@@ -11,7 +11,7 @@
 
 
 	
-<project name="Aceteq Product Delivery System" default="deploy" basedir=".">
+<project name="Aceteq Product Delivery System" default="archive" basedir=".">
 	
     <description>
     	This is the sample struts applicaiton to be used to start different products.
