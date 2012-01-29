@@ -21,7 +21,7 @@ Redirecting to Paypal ..
 <input type="hidden" name="item_name" value="<s:property value='product.name' /> <s:property value='product.pkg' />">
 <input type="hidden" name="item_desc" value="Product Description" />
 <input type="hidden" name="currency_code" value="USD" />
-<input type="hidden" name="return" value="http://localhost:8080/delivery-system/payment-received" />
+<input type="hidden" name="return" value="http://aceteq.in/delivery-system-sandboxed/payment-received" />
 <input type="hidden" name="amount" value="<s:property value='product.amount' />"/>
 <input type="submit" alt="Make payments with PayPal - it's fast, free and secure!" value="Pay" style="display:none" />
 </form>
