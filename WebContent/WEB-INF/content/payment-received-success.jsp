@@ -39,33 +39,36 @@
 		<br />
 		<h3>Support Links</h3>
 		<br />
+			<a href="http://videos-wpdemon.s3.amazonaws.com/Final_usermanual.pdf" target="_blank">
 			<div class="block">
 				<center><img src="imgs/pdf-icon.png" width="128" height="128" />
 				<p>Download User Manual</p></center>
 			</div>
-			
+			</a>
+		
+			<a href="http://videos-wpdemon.s3.amazonaws.com/Installation.mov" target="_blank">
 			<div class="block">
 				<center><img src="imgs/video-icon.png" width="128" height="128" />
 				<p>Installing the plugin</p></center>
 			</div>
-			
+			</a>
+
+			<a href="http://videos-wpdemon.s3.amazonaws.com/CreatingAPopup.mov" target="_blank">
 			<div class="block">
 				<center><img src="imgs/video-icon.png" width="128" height="128" /></center>
 				<center><p>Configuring the popup</p></center>
 			</div>
-			
+			</a>
+
+			<a href="http://videos-wpdemon.s3.amazonaws.com/CreatingANotificationBar.mov" target="_blank">
 			<div class="block">
 				<center><img src="imgs/video-icon.png" width="128" height="128" />
 				<p>Configuring the notification bar</p></center>
 			</div>
-			
+			</a>
 			<div class="clr"></div>
 			
 		</div> <!--Closing support links-->
-			
-			
-			
-			
 			
 		</div>	<!--Contained closed-->
 	
