@@ -46,9 +46,9 @@ public class DeliverAction extends ActionSupport implements Preparable{
 			if(rs != null && rs.next())
 			{
 				System.out.println("\n\\n\n\n\n\n Creating directory ... \n\n\n\n\n");
-				String dest = "/home/deployuser/aceteqlabs.com/j2ee/delivery-system/dump/"+verifyToken;
+				String dest = "/home/deployuser/aceteqlabs.com/j2ee/delivery-system-sandboxed/dump/"+verifyToken;
 				boolean dir = (new File(dest).mkdir());
-				FileMover.copyFile("/home/deployuser/aceteqlabs.com/j2ee/delivery-system/WEB-INF/content/wp-demon.zip",dest+"/wp-demon.zip");
+				FileMover.copyFile("/home/deployuser/aceteqlabs.com/j2ee/delivery-system-sandboxed/WEB-INF/content/wp-demon.zip",dest+"/wp-demon.zip");
 				return "redirect";
 			}
 			else{
