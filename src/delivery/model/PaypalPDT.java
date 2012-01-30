@@ -17,8 +17,8 @@ public class PaypalPDT
 	private String item_name;
 	private boolean verified;
 	private String paypalResp;
-	//private final static String at = "zW23TEL-sHErudZAvhyX5fythMDM8zmA_nNcbmgucFrE6QfSOjVpY4AOxh4";
-	private final static String at = "G6Ic2SOeWBS-7EBGEZiEi-D7molmbwf1BDpjLAsnbFM74G7aTZVwuHxBJsS";
+	private final static String at = "zW23TEL-sHErudZAvhyX5fythMDM8zmA_nNcbmgucFrE6QfSOjVpY4AOxh4";
+	//private final static String at = "G6Ic2SOeWBS-7EBGEZiEi-D7molmbwf1BDpjLAsnbFM74G7aTZVwuHxBJsS";
 	public PaypalPDT()
 	{
 		verified = false;
